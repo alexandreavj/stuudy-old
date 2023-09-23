@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #4983ff, #ffaffa);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stuudy.stuudy.homeController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <MediaView fx:id="videoPlayerUI" fitHeight="600.0" fitWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="timerPane" layoutX="14.0" layoutY="436.0" prefHeight="100.0" prefWidth="190.0" style="-fx-background-color: WHITE; -fx-background-radius: 5; -fx-border-color: BLACK; -fx-border-radius: 5;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+         <children>
+            <Pane prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: #b9b9b9; -fx-background-radius: 5; -fx-border-color: BLACK; -fx-border-radius: 5;">
+               <children>
+                  <Button fx:id="buttonStudyTimer" layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#clickButtonStudyTimer" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-border-color: #eeeeee; -fx-border-radius: 5;" text="study" textFill="#eeeeee">
+                     <font>
+                        <Font name="Andale Mono" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonPauseTimer" layoutX="75.0" layoutY="5.0" mnemonicParsing="false" onAction="#clickButtonPauseTimer" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: #eeeeee; -fx-border-radius: 5;" text="break" textFill="#eeeeee">
+                     <font>
+                        <Font name="Andale Mono" size="12.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="iconButtonSettingsTimer" fitHeight="20.0" fitWidth="20.0" layoutX="153.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@settings.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconButtonSettingsTickTimer" fitHeight="20.0" fitWidth="20.0" layoutX="153.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@tick.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonSettingsTimer" layoutX="153.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickButtonSettingsTimer" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgba(0, 0, 0, 0);" />
+                  <Label fx:id="timerLabel" layoutX="25.0" layoutY="55.0" text="50:00">
+                     <font>
+                        <Font name="Andale Mono" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="iconStartTimer" fitHeight="20.0" fitWidth="20.0" layoutX="135.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@play.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconPauseTimer" fitHeight="20.0" fitWidth="20.0" layoutX="135.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@pause.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonStartPauseTimer" layoutX="133.0" layoutY="58.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickButtonStartPauseTimer" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgba(0, 0, 0, 0);" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="fortunePane" layoutX="497.0" layoutY="14.0" prefHeight="120.0" prefWidth="250.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-background-radius: 10;" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="80.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-background-radius: 5;" text=" fortune " textFill="#eeeeee">
+               <font>
+                  <Font name="Andale Mono" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="fortuneText" layoutX="6.0" layoutY="38.0" prefHeight="62.0" prefWidth="238.0" text="fortune fortune fortune fortune fortune fortune fortune fortune fortune fortune" textAlignment="CENTER" textFill="#eeeeee" wrapText="true">
+               <font>
+                  <Font name="Andale Mono" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSettingsTimer" layoutX="219.0" layoutY="485.0" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="220.0">
+         <children>
+            <Label fx:id="labelTitleSettingsTimer" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="118.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-background-radius: 5;" text="timer settings" textFill="#eeeeee">
+               <font>
+                  <Font name="Andale Mono" size="14.0" />
+               </font>
+            </Label>
+            <Slider fx:id="sliderDurationStudy" blockIncrement="5.0" layoutX="86.0" layoutY="42.0" majorTickUnit="1.0" max="90.0" min="5.0" minorTickCount="1" opacity="0.8" value="50.0" />
+            <Slider fx:id="sliderDurationPause" blockIncrement="5.0" layoutX="86.0" layoutY="70.0" max="90.0" min="5.0" opacity="0.8" snapToTicks="true" value="15.0" />
+            <Label layoutX="21.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="43.0" style="-fx-background-color: rgba(0, 0, 0, 0.05); -fx-background-radius: 5;" text="study" textFill="#eeeeee">
+               <font>
+                  <Font name="Andale Mono" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="43.0" style="-fx-background-color: rgba(0, 0, 0, 0.05); -fx-background-radius: 5;" text="break" textAlignment="CENTER" textFill="#eeeeee" wrapText="true">
+               <font>
+                  <Font name="Andale Mono" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSliderStudy" layoutX="226.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="17.0" style="-fx-background-color: rgba(0, 0, 0, 0.05); -fx-background-radius: 5;" text="50" textFill="#eeeeee">
+               <font>
+                  <Font name="Andale Mono" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSliderBreak" layoutX="225.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="17.0" style="-fx-background-color: rgba(0, 0, 0, 0.05); -fx-background-radius: 5;" text="15" textFill="#eeeeee">
+               <font>
+                  <Font name="Andale Mono" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="100.0" prefWidth="40.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-background-radius: 10;" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <ImageView fx:id="imageKanban" fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@kanban.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageFloppyDiskKanban" fitHeight="25.0" fitWidth="25.0" layoutX="8.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@floppy-disk.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonOpenKanban" layoutX="5.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickButtonKanban" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: rgba(0, 0, 0, 0);" />
+            <Button fx:id="buttonLoadBGFile" layoutX="5.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickButtonLoadBGFile" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: rgba(0, 0, 0, 0);">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@folder.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="kanbanPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="915.0" style="-fx-background-color: rgba(0, 0, 0, 0.3); -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="70.0">
+         <children>
+            <ScrollPane fitToWidth="true" layoutX="14.0" layoutY="15.0" prefHeight="540.0" prefWidth="290.0">
+              <content>
+                <AnchorPane fx:id="paneToDo" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="288.0" style="-fx-background-color: rgba(115, 156, 191, 0.2);">
+                     <children>
+                        <Label layoutX="112.0" layoutY="14.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-background-radius: 5;" text=" to-do ">
+                           <font>
+                              <Font name="Andale Mono" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonNewToDo" layoutX="129.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickNewToDo" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: BLACK; -fx-border-radius: 5;">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@plus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <ScrollPane fitToWidth="true" layoutX="313.0" layoutY="15.0" prefHeight="540.0" prefWidth="290.0">
+              <content>
+                <AnchorPane fx:id="paneInProgress" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgba(239, 211, 215, 0.2);">
+                     <children>
+                        <Label layoutX="85.0" layoutY="14.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-background-radius: 5;" text=" in progress ">
+                           <font>
+                              <Font name="Andale Mono" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonNewInProgress" layoutX="129.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickNewToDo" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: BLACK; -fx-border-radius: 5;">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@plus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <ScrollPane fitToWidth="true" layoutX="611.0" layoutY="15.0" prefHeight="540.0" prefWidth="290.0">
+              <content>
+                <AnchorPane fx:id="paneDone" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgba(156, 191, 167, 0.2);">
+                     <children>
+                        <Label layoutX="117.0" layoutY="14.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-background-radius: 5;" text=" done ">
+                           <font>
+                              <Font name="Andale Mono" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonNewDone" layoutX="129.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickNewToDo" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: BLACK; -fx-border-radius: 5;">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@plus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

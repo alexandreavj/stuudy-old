@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: linear-gradient(to bottom right, #9249FF, #FFAFFA);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stuudy.stuudy.welcomeController">
+   <children>
+      <Label layoutX="178.0" layoutY="53.0" prefHeight="27.0" prefWidth="145.0" text="welcome to" textAlignment="CENTER" textFill="#eeeeee" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="53.0">
+         <font>
+            <Font name="Andale Mono" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="80.0" prefHeight="50.0" prefWidth="155.0" text="stuudy" textAlignment="CENTER" textFill="#eeeeee" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="80.0">
+         <font>
+            <Font name="Andale Mono" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="204.0" text="what's your name?" textAlignment="CENTER" textFill="#eeeeee" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" alignment="CENTER" layoutX="39.0" layoutY="233.0" prefHeight="25.0" prefWidth="423.0" style="-fx-border-color: #eeeeee; -fx-border-radius: 3; -fx-background-color: rgba(0, 0, 0, 0);" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="235.0">
+         <font>
+            <Font name="Andale Mono" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="startButton" layoutX="219.0" layoutY="277.0" mnemonicParsing="false" onAction="#onStartButtonClick" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: #eeeeee; -fx-border-radius: 3;" text="start" textFill="#eeeeee" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="280.0">
+         <font>
+            <Font name="Andale Mono" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
